@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Itaim Bibi — Lançamento Off Market | Silene Rodrigues</title>
+<title>Itaim Bibi — Silene Rodrigues Imóveis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -13,9 +13,7 @@
     --copper-dark: #A0622A;
     --copper-light: #E8B870;
     --bg-main: #0D0D0D;
-    --bg-section: #111111;
     --bg-warm: #1A1510;
-    --bg-agent: #0E0C08;
     --text-title: #F5E8D5;
     --text-mid: #C0A880;
     --text-muted: #6A5A42;
@@ -28,9 +26,7 @@
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--bg-main);
     color: var(--text-title);
@@ -44,19 +40,18 @@
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
-    background: rgba(10,10,8,0.92);
-    backdrop-filter: blur(12px);
+    background: rgba(10,10,8,0.90);
+    backdrop-filter: blur(14px);
     border-bottom: 0.5px solid var(--divider);
     padding: 0 5%;
-    height: 64px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-
   .nav-logo {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
+    font-size: 17px;
     color: var(--copper);
     letter-spacing: 1px;
     line-height: 1.1;
@@ -70,7 +65,6 @@
     text-transform: uppercase;
     margin-top: 1px;
   }
-
   .nav-cta {
     background: var(--copper-dark);
     border: none;
@@ -83,9 +77,9 @@
     text-transform: uppercase;
     font-weight: 500;
     cursor: pointer;
-    transition: background 0.2s;
     text-decoration: none;
     display: inline-block;
+    transition: background 0.2s;
   }
   .nav-cta:hover { background: #8a5020; }
 
@@ -96,46 +90,35 @@
     display: flex;
     align-items: flex-end;
     overflow: hidden;
-    padding-top: 64px;
+    padding-top: 60px;
   }
-
-  .hero-bg {
-    position: absolute;
-    inset: 0;
-    background: #1a1208;
-  }
-
-  /* Fundo com imagem do Itaim Bibi */
   .hero-img {
     position: absolute;
     inset: 0;
-    background-image: url('https://i.ibb.co/wZBw5vmy/Chat-GPT-Image-25-de-mai-de-2026-01-09-40.png');
+    background-image: url('https://i.ibb.co/PsWWv40N/Whats-App-Image-2026-05-27-at-14-26-45.jpg');
     background-size: cover;
-    background-position: center 40%;
-    opacity: 0.7;
+    background-position: center 50%;
   }
-
   .hero-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
-      105deg,
-      rgba(0,0,0,0.82) 0%,
-      rgba(0,0,0,0.55) 50%,
-      rgba(0,0,0,0.2) 100%
+      to top,
+      rgba(0,0,0,0.88) 0%,
+      rgba(0,0,0,0.45) 45%,
+      rgba(0,0,0,0.10) 100%
     );
   }
-
   .hero-content {
     position: relative;
     z-index: 2;
-    padding: 6% 5% 7%;
-    max-width: 600px;
-    animation: fadeUp 1s ease both;
+    padding: 5% 5% 6%;
+    width: 100%;
+    max-width: 700px;
+    animation: fadeUp 0.9s ease both;
   }
-
   @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
+    from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
   }
 
@@ -144,92 +127,47 @@
     letter-spacing: 4px;
     color: var(--copper);
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
-
-  .hero-rule {
-    width: 32px;
-    height: 1px;
-    background: var(--copper);
-    margin-bottom: 16px;
-  }
+  .hero-rule { width: 28px; height: 1px; background: var(--copper); margin-bottom: 14px; }
 
   .hero-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(52px, 9vw, 88px);
+    font-size: clamp(56px, 10vw, 96px);
     font-weight: 700;
     color: var(--text-title);
-    line-height: 0.95;
+    line-height: 0.92;
     letter-spacing: -1px;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 
-  .hero-sub {
-    font-size: 10px;
-    letter-spacing: 2.5px;
-    color: var(--text-mid);
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
-  .hero-sub strong { color: var(--copper-light); font-weight: 500; }
-
-  .hero-dist {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(56px, 9vw, 80px);
-    font-weight: 600;
-    color: var(--copper);
-    line-height: 1;
-  }
-
-  .hero-dist-label {
-    font-size: 9px;
-    letter-spacing: 5px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    margin-top: -4px;
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 28px;
   }
-
-  .hero-specs {
+  .pill {
+    background: rgba(255,255,255,0.08);
+    border: 0.5px solid rgba(200,148,74,0.35);
+    border-radius: 40px;
+    padding: 8px 18px;
+    font-size: 11px;
+    color: var(--text-mid);
+    letter-spacing: 1px;
     display: flex;
     align-items: center;
-    background: rgba(255,255,255,0.07);
-    border: 0.5px solid rgba(255,255,255,0.12);
-    border-radius: 4px;
-    padding: 14px 0;
-    margin-bottom: 22px;
-    width: fit-content;
+    gap: 7px;
   }
-
-  .spec-item {
-    text-align: center;
-    padding: 0 28px;
-  }
-  .spec-val {
-    font-size: 12px;
-    color: #F0DCC0;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-  }
-  .spec-lbl {
-    font-size: 8px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-top: 3px;
-  }
-  .spec-div {
-    width: 1px;
-    height: 32px;
-    background: rgba(255,255,255,0.1);
-  }
+  .pill svg { flex-shrink: 0; }
+  .pill strong { color: var(--copper-light); font-weight: 500; }
 
   .hero-cta {
     display: inline-block;
     background: var(--copper-dark);
     border: none;
     border-radius: 3px;
-    padding: 15px 36px;
+    padding: 16px 38px;
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
     letter-spacing: 3px;
@@ -242,167 +180,55 @@
   }
   .hero-cta:hover { background: #8a5020; transform: translateY(-1px); }
 
-  /* ── SECTIONS ── */
-  .section {
-    padding: 80px 5%;
-    background: var(--bg-section);
+  /* ── FORMULÁRIO ── */
+  #formulario {
+    background: var(--bg-main);
+    padding: 72px 5%;
+    display: flex;
+    justify-content: center;
   }
-  .section.alt { background: var(--bg-main); }
-  .section.dark { background: var(--bg-agent); }
-
-  .section-divider {
-    height: 1px;
-    background: var(--divider);
-    margin: 0 5%;
+  .form-wrap {
+    width: 100%;
+    max-width: 560px;
   }
-
-  .section-label {
+  .form-eyebrow {
     font-size: 9px;
     letter-spacing: 3px;
     color: var(--copper);
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-weight: 500;
   }
-
-  .section-title {
+  .form-heading {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(28px, 3.5vw, 40px);
-    color: var(--text-title);
-    line-height: 1.2;
-    font-weight: 400;
-    margin-bottom: 12px;
-  }
-
-  .section-desc {
-    font-size: 12px;
-    color: var(--text-muted);
-    line-height: 1.9;
-    max-width: 500px;
-  }
-
-  /* ── DIFERENCIAIS ── */
-  .diff-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-top: 40px;
-  }
-  @media (max-width: 768px) {
-    .diff-grid { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 480px) {
-    .diff-grid { grid-template-columns: 1fr; }
-  }
-
-  .diff-card {
-    background: var(--bg-warm);
-    border: 0.5px solid var(--border);
-    border-radius: 6px;
-    padding: 24px 20px;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-  .diff-card:hover {
-    border-color: var(--copper);
-    transform: translateY(-3px);
-  }
-
-  .diff-icon {
-    font-size: 24px;
-    margin-bottom: 14px;
-    display: block;
-    color: var(--copper);
-  }
-  .diff-ttl {
-    font-size: 12px;
-    color: #E0CCA8;
-    font-weight: 600;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-  }
-  .diff-txt {
-    font-size: 11px;
-    color: var(--text-muted);
-    line-height: 1.8;
-  }
-
-  /* ── LOCALIZAÇÃO + FORM (duas colunas) ── */
-  .two-col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
-    align-items: start;
-  }
-  @media (max-width: 768px) {
-    .two-col { grid-template-columns: 1fr; gap: 40px; }
-  }
-
-  .loc-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 28px;
-  }
-
-  .loc-item {
-    background: #0E0C06;
-    border: 0.5px solid #2A1F0E;
-    border-radius: 5px;
-    padding: 16px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-  .loc-icon { font-size: 20px; color: var(--copper); flex-shrink: 0; }
-  .loc-place {
-    font-size: 9px;
-    color: #9A7A4A;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  .loc-dist {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    color: var(--copper);
-    line-height: 1.1;
-  }
-
-  /* ── FORMULÁRIO ── */
-  .form-box {
-    background: var(--bg-warm);
-    border: 0.5px solid var(--border);
-    border-radius: 8px;
-    padding: 32px;
-  }
-
-  .form-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
+    font-size: clamp(26px, 3.5vw, 34px);
     color: var(--text-title);
     line-height: 1.2;
     margin-bottom: 8px;
   }
   .form-sub {
-    font-size: 11px;
+    font-size: 12px;
     color: var(--text-muted);
     line-height: 1.8;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
   }
 
+  .form-box {
+    background: var(--bg-warm);
+    border: 0.5px solid var(--border);
+    border-radius: 8px;
+    padding: 28px 28px 24px;
+  }
   .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    margin-bottom: 16px;
+    gap: 14px;
+    margin-bottom: 14px;
   }
-  @media (max-width: 480px) {
-    .form-row { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 520px) { .form-row { grid-template-columns: 1fr; } }
 
-  .form-field { margin-bottom: 16px; }
+  .form-field { margin-bottom: 14px; }
   .form-field:last-of-type { margin-bottom: 0; }
-
   .form-label {
     font-size: 8px;
     letter-spacing: 2px;
@@ -412,7 +238,6 @@
     margin-bottom: 6px;
     font-weight: 500;
   }
-
   .form-input,
   .form-select {
     background: rgba(10,8,6,0.8);
@@ -428,19 +253,16 @@
     appearance: none;
     -webkit-appearance: none;
   }
-  .form-input:focus,
-  .form-select:focus {
+  .form-input:focus, .form-select:focus {
     outline: none;
     border-color: var(--copper);
   }
   .form-input::placeholder { color: #3A2A18; }
-
   .form-select-wrap { position: relative; }
   .form-select-wrap::after {
     content: '▾';
     position: absolute;
-    right: 14px;
-    top: 50%;
+    right: 14px; top: 50%;
     transform: translateY(-50%);
     color: var(--text-muted);
     font-size: 12px;
@@ -465,7 +287,6 @@
     transition: background 0.2s, transform 0.15s;
   }
   .form-btn:hover { background: #8a5020; transform: translateY(-1px); }
-
   .form-lgpd {
     font-size: 9px;
     color: var(--text-faint);
@@ -475,192 +296,98 @@
   }
 
   /* ── AGENTE ── */
-  .agent-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
-    align-items: center;
+  #agente {
+    background: #090806;
+    border-top: 0.5px solid var(--divider);
+    padding: 64px 5%;
+    display: flex;
+    justify-content: center;
   }
-  @media (max-width: 768px) {
-    .agent-grid { grid-template-columns: 1fr; gap: 36px; }
+  .agent-wrap {
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
   }
-
   .agent-row {
     display: flex;
     align-items: center;
-    gap: 20px;
-    margin-bottom: 18px;
+    gap: 18px;
   }
-
   .agent-avatar {
-    width: 68px;
-    height: 68px;
+    width: 60px; height: 60px;
     border-radius: 50%;
     background: #1a1005;
     border: 1.5px solid var(--copper);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    color: var(--copper);
+    font-size: 20px; color: var(--copper);
     flex-shrink: 0;
   }
-
   .agent-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    color: var(--text-title);
-    margin-bottom: 4px;
+    font-size: 22px; color: var(--text-title);
+    margin-bottom: 3px;
   }
   .agent-role {
-    font-size: 9px;
-    color: #6A5040;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-size: 9px; color: #6A5040;
+    letter-spacing: 2px; text-transform: uppercase;
   }
-  .agent-creci {
-    font-size: 9px;
-    color: #4A3820;
-    margin-top: 3px;
-  }
-
+  .agent-creci { font-size: 9px; color: #4A3820; margin-top: 2px; }
   .agent-bio {
-    font-size: 12px;
-    color: var(--text-muted);
-    line-height: 1.9;
-    font-style: italic;
-    margin-bottom: 24px;
-    max-width: 440px;
+    font-size: 12px; color: var(--text-muted);
+    line-height: 1.9; font-style: italic;
   }
-
   .wpp-btn {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     background: var(--wpp-bg);
     border: 0.5px solid var(--wpp-border);
     border-radius: 5px;
-    padding: 15px 28px;
+    padding: 14px 28px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
-    letter-spacing: 2.5px;
+    font-size: 10px; letter-spacing: 2.5px;
     color: var(--wpp-text);
-    text-transform: uppercase;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
+    text-transform: uppercase; font-weight: 500;
+    cursor: pointer; text-decoration: none;
     transition: background 0.2s, transform 0.15s;
+    margin-top: 4px;
   }
   .wpp-btn:hover { background: #154d26; transform: translateY(-1px); }
   .wpp-btn svg { width: 20px; height: 20px; fill: var(--wpp-text); flex-shrink: 0; }
 
-  .trust-card {
-    background: var(--bg-warm);
-    border: 0.5px solid var(--border);
-    border-radius: 8px;
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .trust-label {
-    font-size: 9px;
-    letter-spacing: 2px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    font-weight: 500;
-    padding-bottom: 12px;
-    border-bottom: 0.5px solid var(--border);
-  }
-
-  .trust-item {
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-  }
-  .trust-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: rgba(200,148,74,0.1);
-    border: 0.5px solid rgba(200,148,74,0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    color: var(--copper);
-    font-size: 16px;
-  }
-  .trust-ttl {
-    font-size: 12px;
-    color: #D0B888;
-    font-weight: 500;
-    margin-bottom: 4px;
-  }
-  .trust-txt {
-    font-size: 11px;
-    color: var(--text-muted);
-    line-height: 1.7;
-  }
-
   /* ── FOOTER ── */
   footer {
-    padding: 24px 5%;
+    padding: 20px 5%;
     background: #070707;
     border-top: 0.5px solid var(--divider);
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
   }
-
-  .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
-    color: var(--copper);
-  }
-  .footer-sub {
-    font-size: 9px;
-    color: var(--text-faint);
-    margin-top: 2px;
-    letter-spacing: 0.5px;
-  }
-
-  .footer-links {
-    display: flex;
-    gap: 24px;
-  }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 15px; color: var(--copper); }
+  .footer-sub { font-size: 9px; color: var(--text-faint); margin-top: 2px; }
+  .footer-links { display: flex; gap: 20px; }
   .footer-links a {
-    font-size: 9px;
-    color: var(--text-faint);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-decoration: none;
-    transition: color 0.2s;
+    font-size: 9px; color: var(--text-faint);
+    text-transform: uppercase; letter-spacing: 1px;
+    text-decoration: none; transition: color 0.2s;
   }
   .footer-links a:hover { color: var(--copper); }
 
-  /* ── SCROLL REVEAL ── */
-  .reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* ── MOBILE ADJUSTMENTS ── */
+  /* ── MOBILE ── */
   @media (max-width: 600px) {
     nav { padding: 0 4%; }
     .hero-content { padding: 5% 4% 8%; }
-    .section { padding: 56px 4%; }
-    .section-divider { margin: 0 4%; }
+    #formulario, #agente { padding: 56px 4%; }
     footer { flex-direction: column; align-items: flex-start; }
+    .hero-pills { gap: 8px; }
+    .pill { font-size: 10px; padding: 7px 14px; }
   }
 </style>
 </head>
@@ -672,117 +399,44 @@
     Silene Rodrigues
     <span>Imóveis de alto padrão</span>
   </div>
-  <a href="#formulario" class="nav-cta">Solicitar informações</a>
+  <a href="#formulario" class="nav-cta">Falar com a Silene</a>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-bg">
-    <div class="hero-img"></div>
-  </div>
+  <div class="hero-img"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <div class="hero-tag">Breve lançamento</div>
+    <div class="hero-tag">São Paulo · SP</div>
     <div class="hero-rule"></div>
     <h1 class="hero-title">ITAIM<br>BIBI</h1>
-    <p class="hero-sub">A poucos passos do <strong>Parque do Povo</strong></p>
-    <div class="hero-dist">500</div>
-    <div class="hero-dist-label">metros</div>
-    <div class="hero-specs">
-      <div class="spec-item">
-        <div class="spec-val">500 m²</div>
-        <div class="spec-lbl">Área</div>
+
+    <div class="hero-pills">
+      <div class="pill">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <strong>500 m²</strong>
       </div>
-      <div class="spec-div"></div>
-      <div class="spec-item">
-        <div class="spec-val">4 Suítes</div>
-        <div class="spec-lbl">Dormitórios</div>
+      <div class="pill">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22V12M8 22V16M16 22V18"/><path d="M3 8C3 5.2 5.6 3 9 3c1.2 0 2.4.3 3 1 .6-.7 1.8-1 3-1 3.4 0 6 2.2 6 5 0 4-5 9-9 12C8 17 3 13 3 8z"/></svg>
+        Ao lado do <strong>Parque do Povo</strong>
       </div>
-      <div class="spec-div"></div>
-      <div class="spec-item">
-        <div class="spec-val">4–5 Vagas</div>
-        <div class="spec-lbl">Garagem</div>
+      <div class="pill">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        Próximo à <strong>Faria Lima</strong>
       </div>
     </div>
+
     <a href="#formulario" class="hero-cta">Quero saber mais</a>
   </div>
 </section>
 
-<div class="section-divider"></div>
-
-<!-- DIFERENCIAIS -->
-<section class="section reveal" id="diferenciais">
-  <div class="section-label">Diferenciais</div>
-  <h2 class="section-title">Cada detalhe pensado<br>para uma vida extraordinária.</h2>
-  <p class="section-desc">Um lançamento exclusivo no bairro mais desejado de São Paulo, combinando sofisticação, localização privilegiada e um padrão de acabamento que vai além do esperado.</p>
-  <div class="diff-grid">
-    <div class="diff-card">
-      <svg class="diff-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-      <div class="diff-ttl">Localização prime</div>
-      <div class="diff-txt">Coração financeiro e cultural do Itaim Bibi, onde tudo acontece.</div>
-    </div>
-    <div class="diff-card">
-      <svg class="diff-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M12 22V12M8 22V16M16 22V18M4 22V20M20 22V16"/><path d="M3 8C3 5.2 5.6 3 9 3c1.2 0 2.4.3 3 1 .6-.7 1.8-1 3-1 3.4 0 6 2.2 6 5 0 4-5 9-9 12C8 17 3 13 3 8z"/></svg>
-      <div class="diff-ttl">Parque do Povo</div>
-      <div class="diff-txt">Qualidade de vida com o parque a 500 metros do seu andar.</div>
-    </div>
-    <div class="diff-card">
-      <svg class="diff-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-      <div class="diff-ttl">Off market</div>
-      <div class="diff-txt">Acesso exclusivo antes do lançamento oficial ao mercado.</div>
-    </div>
-    <div class="diff-card">
-      <svg class="diff-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      <div class="diff-ttl">Alto padrão</div>
-      <div class="diff-txt">Arquitetura autoral e acabamento superior em cada ambiente.</div>
-    </div>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- LOCALIZAÇÃO + FORMULÁRIO -->
-<section class="section alt reveal" id="formulario">
-  <div class="two-col">
-    <div>
-      <div class="section-label">Localização privilegiada</div>
-      <h2 class="section-title">No centro de tudo<br>em São Paulo.</h2>
-      <p class="section-desc">Próximo aos melhores restaurantes, shoppings, parques e ao centro financeiro da cidade.</p>
-      <div class="loc-grid">
-        <div class="loc-item">
-          <svg class="loc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true"><path d="M12 22V12M8 22V16M16 22V18"/><path d="M3 8C3 5.2 5.6 3 9 3c1.2 0 2.4.3 3 1 .6-.7 1.8-1 3-1 3.4 0 6 2.2 6 5 0 4-5 9-9 12C8 17 3 13 3 8z"/></svg>
-          <div>
-            <div class="loc-place">Parque do Povo</div>
-            <div class="loc-dist">500m</div>
-          </div>
-        </div>
-        <div class="loc-item">
-          <svg class="loc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-          <div>
-            <div class="loc-place">Av. Faria Lima</div>
-            <div class="loc-dist">5 min</div>
-          </div>
-        </div>
-        <div class="loc-item">
-          <svg class="loc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-          <div>
-            <div class="loc-place">Shoppings</div>
-            <div class="loc-dist">3 min</div>
-          </div>
-        </div>
-        <div class="loc-item">
-          <svg class="loc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22" aria-hidden="true"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
-          <div>
-            <div class="loc-place">Congonhas</div>
-            <div class="loc-dist">15 min</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+<!-- FORMULÁRIO -->
+<section id="formulario">
+  <div class="form-wrap">
+    <div class="form-eyebrow">Atendimento exclusivo</div>
+    <h2 class="form-heading">Solicite mais<br>informações</h2>
+    <p class="form-sub">Preencha abaixo e a Silene entrará em contato com você.</p>
     <div class="form-box">
-      <div class="form-title">Solicite acesso<br>às informações</div>
-      <p class="form-sub">Atendimento exclusivo e sigiloso. Preencha abaixo e entraremos em contato.</p>
       <div class="form-row">
         <div class="form-field">
           <label class="form-label" for="nome">Nome completo</label>
@@ -794,7 +448,7 @@
         </div>
       </div>
       <div class="form-field">
-        <label class="form-label" for="perfil">Perfil do investidor</label>
+        <label class="form-label" for="perfil">Seu interesse</label>
         <div class="form-select-wrap">
           <select class="form-select" id="perfil" name="perfil" required>
             <option value="" disabled selected>Selecione...</option>
@@ -810,57 +464,24 @@
   </div>
 </section>
 
-<div class="section-divider"></div>
-
 <!-- AGENTE -->
-<section class="section dark reveal">
-  <div class="agent-grid">
-    <div>
-      <div class="section-label">Atendimento exclusivo</div>
-      <div class="agent-row">
-        <div class="agent-avatar">SR</div>
-        <div>
-          <div class="agent-name">Silene Rodrigues</div>
-          <div class="agent-role">Corretora de alto padrão · São Paulo</div>
-          <div class="agent-creci">CRECI 000000-F</div>
-        </div>
-      </div>
-      <p class="agent-bio">"Sou especialista em imóveis exclusivos em São Paulo. Atendo com discrição, agilidade e acesso a lançamentos antes do mercado aberto."</p>
-      <a class="wpp-btn" href="https://wa.me/5511957278000?text=Olá+Silene!+Vi+o+lançamento+no+Itaim+Bibi+e+tenho+interesse.+Pode+me+enviar+mais+informações?" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.858L.057 23.716a.5.5 0 00.614.641l6.011-1.558A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.031-1.387l-.36-.214-3.732.967.999-3.62-.235-.373A9.794 9.794 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
-        Falar com a Silene agora
-      </a>
-    </div>
-    <div class="trust-card">
-      <div class="trust-label">Por que confiar?</div>
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-        </div>
-        <div>
-          <div class="trust-ttl">Sigilo total</div>
-          <div class="trust-txt">Suas informações são utilizadas exclusivamente para este atendimento.</div>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div>
-          <div class="trust-ttl">Resposta em até 2h</div>
-          <div class="trust-txt">Atendimento ágil e personalizado para cada cliente.</div>
-        </div>
-      </div>
-      <div class="trust-item">
-        <div class="trust-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <div>
-          <div class="trust-ttl">Acesso antecipado</div>
-          <div class="trust-txt">Condições especiais disponíveis apenas para este grupo seleto de investidores.</div>
-        </div>
+<section id="agente">
+  <div class="agent-wrap">
+    <div class="agent-row">
+      <div class="agent-avatar">SR</div>
+      <div>
+        <div class="agent-name">Silene Rodrigues</div>
+        <div class="agent-role">Corretora de alto padrão · São Paulo</div>
+        <div class="agent-creci">CRECI 000000-F</div>
       </div>
     </div>
+    <p class="agent-bio">"Sou especialista em imóveis exclusivos em São Paulo. Atendo com discrição, agilidade e acesso a oportunidades únicas no mercado."</p>
+    <a class="wpp-btn"
+      href="https://wa.me/5511957278000?text=Olá+Silene!+Vi+o+imóvel+no+Itaim+Bibi+e+tenho+interesse.+Pode+me+enviar+mais+informações?"
+      target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.533 5.858L.057 23.716a.5.5 0 00.614.641l6.011-1.558A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.031-1.387l-.36-.214-3.732.967.999-3.62-.235-.373A9.794 9.794 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+      Falar com a Silene agora
+    </a>
   </div>
 </section>
 
@@ -872,24 +493,11 @@
   </div>
   <div class="footer-links">
     <a href="#">Política de privacidade</a>
-    <a href="#">LGPD</a>
     <a href="https://wa.me/5511957278000" target="_blank" rel="noopener">Contato</a>
   </div>
 </footer>
 
 <script>
-  /* ── Scroll reveal ── */
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  reveals.forEach(el => observer.observe(el));
-
   /* ── Formulário → Formspree (e-mail) + WhatsApp ── */
   async function enviarFormulario() {
     const nome   = document.getElementById('nome').value.trim();
@@ -901,20 +509,18 @@
       return;
     }
 
-    /* Envia dados por e-mail via Formspree */
     try {
       await fetch('https://formspree.io/f/mdajwgrj', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nome, whatsapp: fone, perfil })
+        body: JSON.stringify({ nome, whatsapp: fone, interesse: perfil })
       });
     } catch(e) { console.warn('Formspree error:', e); }
 
-    /* Abre WhatsApp da Silene com dados preenchidos */
     const numero = '5511957278000';
     const msg = encodeURIComponent(
-      `Olá Silene! Vi o lançamento no Itaim Bibi e tenho interesse.\n\n` +
-      `Nome: ${nome}\nWhatsApp: ${fone}\nPerfil: ${perfil}`
+      `Olá Silene! Vi o imóvel no Itaim Bibi e tenho interesse.\n\n` +
+      `Nome: ${nome}\nWhatsApp: ${fone}\nInteresse: ${perfil}`
     );
     window.open(`https://wa.me/${numero}?text=${msg}`, '_blank');
   }
@@ -922,10 +528,10 @@
   /* ── Máscara telefone ── */
   document.getElementById('whatsapp').addEventListener('input', function(e) {
     let v = e.target.value.replace(/\D/g, '').slice(0, 11);
-    if (v.length > 10)      v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
-    else if (v.length > 6)  v = v.replace(/^(\d{2})(\d{4})(\d{0,4})$/, '($1) $2-$3');
-    else if (v.length > 2)  v = v.replace(/^(\d{2})(\d{0,5})$/, '($1) $2');
-    else if (v.length > 0)  v = '(' + v;
+    if (v.length > 10)     v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+    else if (v.length > 6) v = v.replace(/^(\d{2})(\d{4})(\d{0,4})$/, '($1) $2-$3');
+    else if (v.length > 2) v = v.replace(/^(\d{2})(\d{0,5})$/, '($1) $2');
+    else if (v.length > 0) v = '(' + v;
     e.target.value = v;
   });
 </script>
